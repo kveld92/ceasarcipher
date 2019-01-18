@@ -1,9 +1,6 @@
 #include <cstdlib>
 #include <iostream>
 #include <string>
-#include <vector>
-#include <numeric>
-#include <sstream>
 
 std::string CaesarCipher(std::string string, int shift, bool cipher);
 
