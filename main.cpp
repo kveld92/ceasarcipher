@@ -6,14 +6,19 @@ std::string CaesarCipher(std::string string, int shift, bool cipher);
 
 int main(){
   std::string string = "";
+  std::string shiftAmount = "";
+  int iShiftAmount;
   std::cout << "Type :q to exit" << std::endl;
   while(1){
     std::cout << " ? : ";
     std::getline(std::cin, string);
+    std::cout << "Shift amount: ";
+    std::getline(std::cin, shiftAmount);
+    iShiftAmount = stoi(shiftAmount);
     if(string == ":q") break;
 
-    std::string encipherdStr = CaesarCipher(string, 5, true);
-    std::string decipheredStr = CaesarCipher(encipherdStr, 5, false);
+    std::string encipherdStr = CaesarCipher(string, iShiftAmount, true);
+    std::string decipheredStr = CaesarCipher(encipherdStr, iShiftAmount, false);
     std::cout << "Enciphered: " << encipherdStr << "\nDeciphered: " << decipheredStr << std::endl;
   }
   std::cout << "Exiting";
